@@ -17,6 +17,10 @@ class Product extends Model
     {
         return $this->belongsTo(Country::class , 'product_id');
     }
+    public function offer()
+    {
+        return $this->belongsTo(offer::class , 'product_id');
+    }
     protected $casts = [
         'id' => 'array',
     ];
